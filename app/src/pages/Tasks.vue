@@ -1,6 +1,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import todo from '../components/Task.vue'
+import createTodo from '../components/createTodo.vue'
 export default{
   data(){
     return{
@@ -17,7 +18,8 @@ export default{
     })
   },
   components: {
-    todo
+    todo,
+    'create-todo': createTodo
   }
 }
 </script>
@@ -30,7 +32,7 @@ export default{
   <div>
     <div class="row">
       <div class="col s12 m6 l4">
-        <h1 class="md-display-1">Tarefas pendentes</h1>
+        <h1 class="md-title">Tarefas pendentes</h1>
         <div class="row">
           <md-whiteframe md-elevation="2">
             <div class="col s12 m12 l12" style="max-height: 500px; overflow-y: auto">
@@ -45,7 +47,7 @@ export default{
         </div>
       </div>
       <div class="col s12 m6 l4">
-        <h1 class="md-display-1">Tarefas completadas</h1>
+        <h1 class="md-title">Tarefas completadas</h1>
         <div class="row">
           <md-whiteframe md-elevation="2">
             <div class="col s12 m12 l12" style="max-height: 500px; overflow-y: auto">
@@ -60,7 +62,7 @@ export default{
         </div>
       </div>
       <div class="col s12 m6 l4">
-        <h1 class="md-display-1">Tarefas canceladas</h1>
+        <h1 class="md-title">Tarefas canceladas</h1>
         <div class="row">
           <md-whiteframe md-elevation="2">
             <div class="col s12 m12 l12" style="max-height: 500px; overflow-y: auto">
@@ -75,8 +77,6 @@ export default{
         </div>
       </div>
     </div>
-    <md-button class="md-fab md-primary" style="position: absolute; bottom: 20px; right: 20px;">
-      <md-icon>add</md-icon>
-    </md-button>
+    <create-todo></create-todo>
   </div>
 </template>
