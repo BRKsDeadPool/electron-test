@@ -1,0 +1,17 @@
+@import "variables";
+@import "components/grid";
+
+body {
+  padding-top: 70px;
+}
+
+.md-fixed-top {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
